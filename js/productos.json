@@ -1,0 +1,122 @@
+[
+    {
+        "id": "vestido1",
+        "titulo": "Vestido Azul estampados",
+        "imagen": "/img/vestidos/vestido1.png",
+        "categoria": {
+            "nombre": "Vestidos",
+            "id": "vestidos"
+        },
+        "precio": 85.00
+    },
+    {
+        "id": "vestido2",
+        "titulo": "Vestido Diseño de Flores",
+        "imagen": "/img/vestidos/vestido2.png",
+        "categoria": {
+            "nombre": "Vestidos",
+            "id": "vestidos"
+        },
+        "precio": 90.00
+    },
+    {
+        "id": "vestido3",
+        "titulo": "Vestido Rosado Corto",
+        "imagen": "/img/vestidos/vestido3.png",
+        "categoria": {
+            "nombre": "Vestidos",
+            "id": "vestidos"
+        },
+        "precio": 75.00
+    },
+    {
+        "id": "vestido4",
+        "titulo": "Vestido Rosado Largo",
+        "imagen": "/img/vestidos/vestido4.png",
+        "categoria": {
+            "nombre": "Vestidos",
+            "id": "vestidos"
+        },
+        "precio": 110.00
+    },
+    {
+        "id": "blusa1",
+        "titulo": "Blusa Color Negro",
+        "imagen": "/img/blusas/blusa1.jpg",
+        "categoria": {
+            "nombre": "Blusas",
+            "id": "blusas"
+        },
+        "precio": 70.00
+    },
+    {
+        "id": "blusa2",
+        "titulo": "Blusa Color Azul",
+        "imagen": "/img/blusas/blusa2.jpg",
+        "categoria": {
+            "nombre": "Blusas",
+            "id": "blusas"
+        },
+        "precio": 90.00
+    },
+    {
+        "id": "blusa3",
+        "titulo": "Blusa Blanca manga corta",
+        "imagen": "/img/blusas/blusa3.jpg",
+        "categoria": {
+            "nombre": "Blusas",
+            "id": "blusas"
+        },
+        "precio": 85.00
+    },
+    {
+        "id": "blusa4",
+        "titulo": "Blusa manga campana",
+        "imagen": "/img/blusas/blusa4.jpg",
+        "categoria": {
+            "nombre": "Blusas",
+            "id": "blusas"
+        },
+        "precio": 79.90
+    },
+    {
+        "id": "abrigo1",
+        "titulo": "Abrigo Rojo cruzado",
+        "imagen": "/img/abrigos/abrigo1.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 85.00
+    },
+    {
+        "id": "abrigo2",
+        "titulo": "Abrigo Verde Oscuro",
+        "imagen": "/img/abrigos/abrigo2.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 85.00
+    },
+    {
+       "id": "abrigo3",
+        "titulo": "Abrigo Naranja",
+        "imagen": "/img/abrigos/abrigo3.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 85.00
+    },
+    {
+       "id": "abrigo4",
+        "titulo": "Abrigo Camel largo",
+        "imagen": "/img/abrigos/abrigo4.png",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 75.00
+    }
+]

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Rubik", sans-serif;
+    }
+
+    body {
+      background-color: #e0a69c;
+      font-family: "Rubik", sans-serif;
+      /*font-weight: bold;*/
+      color: #333;
+      line-height: 1.6;
+    }
+
+
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      /* Altura de las imágenes */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+      padding: 20px 20px 20px 20px;
+      /* Agrega 20px de espacio a la izquierda y derecha */
+    }
+
+    .image-container:nth-of-type(odd) {
+      justify-content: flex-start;
+      /* Texto a la izquierda */
+
+    }
+
+    .image-container:nth-of-type(even) {
+      justify-content: flex-end;
+      /* Texto a la derecha */
+
+    }
+
+    .text-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      margin: 0 40px;
+
+    }
+
+
+    .text-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      cursor: default;
+    }
+
+    .text-box h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: #333;
+      cursor: default;
+    }
+
+    .text-box p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #555;
+      cursor: default;
+    }
+
+    /* Footer Styles */
+    footer {
+      position: fixed;
+      /* Fija el footer en la parte inferior */
+      bottom: 0;
+      /* Alinea el footer en la parte inferior de la ventana */
+      left: 0;
+      width: 100%;
+      /* El footer ocupa todo el ancho de la página */
+      /*background-color: #333;*/
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e0a69c;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    /* Imágenes específicas */
+    .image-container:nth-of-type(1) {
+      background-image: url('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
+    }
+
+    .image-container:nth-of-type(2) {
+      background-image: url('https://images.unsplash.com/photo-1512207576147-99bc3066b621?q=80&w=1518&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+    }
+
+    .image-container:nth-of-type(3) {
+      background-image: url('https://plus.unsplash.com/premium_photo-1664202526559-e21e9c0fb46a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    }
+
+    .nav {
+         
+      height: 5.2rem;
+      padding-left: 30px;
+      padding-right: 20px;
+      padding-top: 40px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-list {
+      list-style: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      margin: 0;
+      padding: 4.4rem;
+      display: flex;
+      /* Cambiado a flex */
+      flex-direction: row;
+      /* Alinear elementos en fila */
+      justify-content: center;
+      transform: translateX(60%);
+    }
+
+
+    .nav-item {
+      border-bottom: 2px solid rgba(255, 255, 255, .3);
+      margin-right: 20px;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      /* Tamaño de fuente adecuado */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      /* Espaciado entre letras */
+      transition: color 0.3s ease;
+      /* Efecto suave al pasar el mouse */
+    }
+
+    .nav-link:hover {
+      color: #000000;
+      /* Cambia el color al pasar el mouse */
+    }
+    #menu-container .nav-list{
+      position: fixed;
+      top: 15px;
+      z-index: 1000;;
+    }
+    
+  </style>
+  <base href="/">
+
+</head>
+
+<body>
+  <header>
+  
+    <div id="menu-container"></div>
+  </header>
+  <div class="container">
+    <!-- Primera imagen -->
+    <div class="image-container">
+      <div class="text-box">
+        <h2>Inspiración en la Moda</h2>
+        <p>Descubre nuestra colección exclusiva de ropa diseñada para realzar tu estilo único.</p>
+      </div>
+    </div>
+
+    <!-- Segunda imagen -->
+    <div class="image-container">
+      <div class="text-box">
+        <h2>Belleza Natural</h2>
+        <p>Nuestros productos cosméticos están formulados con ingredientes naturales para cuidar tu piel.</p>
+      </div>
+    </div>
+
+    <!-- Tercera imagen -->
+    <div class="image-container">
+      <div class="text-box">
+        <h2>Tendencias Actuales</h2>
+        <p>Mantente al día con las últimas tendencias en moda y belleza. ¡Encuentra lo que buscas aquí!</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Preguntas Frecuentes. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".faq-pregunta").forEach((question) => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        answer.classList.toggle("show");
+      });
+    });
+  </script>
+  <script>
+    // Cargar el menú dinámicamente
+    fetch('/pages/menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el menú:', error));
+  </script>
+
+
+</body>
+
+</html>

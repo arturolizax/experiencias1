@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preguntas Frecuentes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Rubik", sans-serif;
+    }
+
+    body {
+      background-color: #e0a69c;
+      font-family: "Rubik", sans-serif;
+      font-weight: bold;
+      color: #333;
+      line-height: 1.6;
+    }
+    #menu-container .nav-list{
+      position: fixed;
+      top: 15px;
+      z-index: 1000;;
+    }
+
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .faq-contenedor {
+      width: 50%;
+      margin: 20px;
+    }
+
+    .faq-pregunta {
+      cursor: pointer;
+      padding: 15px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      margin-top: 8px;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .faq-pregunta:hover {
+      background-color: #ddd;
+    }
+
+    .faq-respuesta {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      padding-left: 15px;
+      padding-right: 5px;
+      padding-top: 13px;
+      line-height: 1.35;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .faq-respuesta.show {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+    .Contenedor_imagenes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      /* Espaciado entre las imágenes */
+      width: 20%;
+    }
+
+    .side-imagen_izquierda,
+    .side-imagen_derecha {
+      width: 100%;
+      /* Las imágenes ocupan el ancho del contenedor */
+      height: auto;
+      /* Mantén la proporción de la imagen */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer Styles */
+    footer {
+      position: fixed;
+      /* Fija el footer en la parte inferior */
+      bottom: 0;
+      /* Alinea el footer en la parte inferior de la ventana */
+      left: 0;
+      width: 100%;
+      /* El footer ocupa todo el ancho de la página */
+      /*background-color: #333;*/
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #e0a69c;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+
+    .nav {
+      height: 5.2rem;
+      padding-left: 30px;
+      padding-right: 20px;
+      padding-top: 40px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-list {
+      font-family: 'Poppins', sans-serif;   
+
+      list-style: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      margin: 0;
+      padding: 4.4rem;
+      display: flex;
+      /* Cambiado a flex */
+      flex-direction: row;
+      /* Alinear elementos en fila */
+      justify-content: center;
+      transform: translateX(60%);
+    }
+
+
+    .nav-item {
+      border-bottom: 2px solid rgba(255, 255, 255, .3);
+      margin-right: 20px;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      /* Tamaño de fuente adecuado */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      /* Espaciado entre letras */
+      transition: color 0.3s ease;
+      /* Efecto suave al pasar el mouse */
+    }
+
+    .nav-link:hover {
+      color: #000000;
+      /* Cambia el color al pasar el mouse */
+    }
+  </style>
+  <base href="/">
+
+</head>
+
+<body>
+  <header>
+    <div id="menu-container"></div>
+  </header>
+  <div class="contenedor">
+    <div class="Contenedor_imagenes">
+      <img src="../img/RopaFAQ/Imagen_izquierda_1.jpg" alt="Imagen Izquierda" class="side-imagen_izquierda" />
+      <img src="../img/RopaFAQ/Imagen_izquierda_2.jpg" alt="Imagen Izquierda 2" class="side-imagen_izquierda" />
+      <img src="../img/RopaFAQ/Imagen_izquierda_3.jpg" alt="Imagen Izquierda 3" class="side-imagen_izquierda" />
+      <img src="../img/RopaFAQ/Imagen_izquierda_4.jpg" alt="Imagen Izquierda 4" class="side-imagen_izquierda" />
+    </div>
+    <main class="faq-contenedor">
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Cómo sé mi talla correcta en las prendas de MujerPro?</div>
+        <div class="faq-respuesta">
+          En MujerPro nos preocupamos por tu comodidad. Tenemos una guía de tallas detallada en cada producto y recomendamos revisar nuestras tablas de medidas. Si necesitas ayuda adicional, nuestro equipo de atención al cliente puede asesorarte personalmente por WhatsApp o correo electrónico.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Los colores de las prendas coinciden con las fotos?</div>
+        <div class="faq-respuesta">
+          Trabajamos con fotografía profesional en estudio con iluminación controlada, pero los colores pueden variar ligeramente dependiendo de la configuración de tu pantalla. Si recibes una prenda con variación significativa de color, contáctanos inmediatamente para resolverlo.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Qué materiales utilizan en sus prendas?</div>
+        <div class="faq-respuesta">
+          Priorizamos materiales sostenibles y de calidad. El 80% de nuestra colección usa algodón orgánico, lino ecológico y tejidos reciclados. Todas nuestras prendas incluyen etiquetas con composición exacta y consejos de cuidado.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Hacen envíos internacionales?</div>
+        <div class="faq-respuesta">
+          ¡Sí! Entregamos a más de 50 países. Los tiempos de envío varían entre 5-15 días hábiles según destino. Todos los pedidos internacionales incluyen seguimiento en tiempo real y cobertura de aduanas.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Cómo puedo combinar accesorios con mis outfits?</div>
+        <div class="faq-respuesta">
+          En nuestra sección de blog tenemos guías mensuales de styling, y cada producto incluye sugerencias de combinación. Además, ofrecemos un servicio personalizado de asesoría de imagen gratuito con compras superiores a $150.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Qué hago si mi pedido llega con defectos?</div>
+        <div class="faq-respuesta">
+          La calidad es nuestra prioridad. Si recibes un artículo con fallos de fabricación, te enviaremos uno nuevo inmediatamente sin costo adicional. Solo necesitas enviarnos fotos del defecto a calidad@mujerpro.com y resolveremos en menos de 24h.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Tienen opciones para tallas plus?</div>
+        <div class="faq-respuesta">
+          ¡Absolutamente! Nuestra línea "PowerCurves" ofrece tallas desde XS hasta 5XL con diseños exclusivos que realzan la figura. Todas las prendas plus size están desarrolladas con estudios de antropometría para garantizar ajuste perfecto.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Cómo mantengo la calidad de las prendas?</div>
+        <div class="faq-respuesta">
+          Cada prenda incluye una tarjeta de cuidado con instrucciones específicas. Recomendamos lavado en frío y secado natural para mayor durabilidad. Para prendas delicadas, ofrecemos servicio gratuito de reparación de costuras durante el primer año.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta">¿Son seguras las compras en su web?</div>
+        <div class="faq-respuesta">
+          Tu seguridad es fundamental. Usamos tecnología SSL de última generación y procesamiento de pagos a través de PayPal y Stripe. Nunca almacenamos datos de tu tarjeta de crédito. Además, ofrecemos compra protegida con reembolso 100% garantizado.
+        </div>
+      </div>
+    </main>
+    <div class="Contenedor_imagenes">
+      <img src="../img/RopaFAQ/Imagen_derecha_1.jpg" alt="Imagen Derecha" class="side-imagen_derecha" />
+      <img src="../img/RopaFAQ/Imagen_derecha_2.jpg" alt="Imagen Derecha 2" class="side-imagen_derecha" />
+      <img src="../img/RopaFAQ/Imagen_derecha_3.jpg" alt="Imagen Derecha 3" class="side-imagen_derecha" />
+      <img src="../img/RopaFAQ/Imagen_derecha_4.jpg" alt="Imagen Derecha 4" class="side-imagen_derecha" />
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <p>&copy; 2023 Preguntas Frecuentes. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".faq-pregunta").forEach((question) => {
+      question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        answer.classList.toggle("show");
+      });
+    });
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    // Cargar el menú dinámicamente
+    fetch('../pages/menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el menú:', error));
+  </script>
+</body>
+
+</html>

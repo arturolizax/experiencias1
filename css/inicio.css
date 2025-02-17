@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&family=Bodoni+Moda:opsz@6..96&family=Cinzel&family=Cinzel+Decorative&family=Darker+Grotesque:wght@500&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #000;
+    scroll-behavior: smooth;
+    background-color: #e0a69c;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mujerpro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 30%;
+
+}
+
+.container {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+video {
+    position: fixed;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height:100%;
+    padding-top: 0;
+    margin-top: 0
+    ;
+    transform: translateX(calc((80% - 100vw) / 2));
+    z-index: -2;
+    justify-content: center;
+    align-items: center;
+}
+
+
+hr {
+    color: black;
+    background-color: black;
+    padding: 0%;
+    width: 15%;
+}
+
+.sombra .titl {
+    font-family: 'Pacifico';
+    text-align: center;
+    color: rgb(249, 167, 151);
+    font-size: 30px;
+}
+
+.fil2 {
+    font-size: 55px;
+    background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.925));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 0;
+    color: transparent;
+    font-family: 'Poppins';
+    filter: drop-shadow(3px 3px 3px #000000);
+}
+
+.sombra .titl3 {
+    font-family: 'Poppins';
+    padding: 0;
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+}
+
+h2.linea {
+    position: relative;
+    z-index: 1;
+}
+
+h2.linea:before {
+    border-top: 2px solid #ff0000;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: -1;
+}
+
+h2.linea span {
+    background: #fff;
+    z-index: 100;
+    position: relative;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+
+footer img {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}
+
+
+.nav {
+    height: 5.2rem;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav-list {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #000;
+    scroll-behavior: smooth;
+    background-color: #e0a69c;
+    
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: #252525;
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1250;
+    transform: translateX(-100%);
+
+}
+
+nav .logo img {
+    width: 40%;
+    height: 50%;
+    min-width: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+    justify-content: center;
+}
+
+.nav-item {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
+.nav-link {
+    display: block;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-right: -2px;
+}
+
+.nav-link:hover {
+    color: #ffbb00;
+}
+
+.hero {
+    margin-top: -50px;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    height: 50vh;
+    display: block;
+}
+
+
+#hero {
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+.h2-sub {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: .4;
+}
+
+.sub {
+    font-family: 'Poppins';
+    font-size: 30px;
+    padding: 30px 91px 30px;
+}
+
+.fil {
+    font-size: 50px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+
+
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 30%;
+}
+
+footer p {
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 100;
+}
+
+footer p.autores{
+    z-index: 1000;
+}
+
+.footer-content {
+    overflow: hidden;
+}
+
+.footer-content h4 {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    list-style: none;
+    margin-bottom: 3.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: .8rem 2rem;
+
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+    color: #ffae00;
+}
+
+.news-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.news-input {
+    width: 90%;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.news-btn {
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 22px;
+    top: 12px;
+}
+
+
+
+@media screen and (min-width: 900px) {}
+
+.nav {
+    justify-content: space-between;
+}
+
+.nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+
+
+.active {
+    position: relative;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+}
+
+img {
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 77.5rem;
+    margin: auto;
+    padding-left: 350px;
+}
+
+
+.social-media,
+.news-form {
+    width: 100%;
+    max-width: 27.3rem;
+    margin: 0 1rem;
+}
+
+.news-btn {
+    margin-left: 7.5rem;
+}
